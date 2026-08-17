@@ -4,7 +4,7 @@ pipeline {
     }
     environment {
         appVersion = ''
-        acc-id = '884057990406'
+        acc_id = '884057990406'
         project = 'roboshop'
         component = 'catalogue'
     }
@@ -34,9 +34,9 @@ pipeline {
                     // in this block we get aws credentials
                     withAWS(credentials: 'aws-creds', region: 'us-east-1') {
                         sh """
-                            aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $(acc-id).dkr.ecr.us-east-1.amazonaws.com
-                            docker build -t $(acc-id).dkr.ecr.us-east-1.amazonaws.com/${project}/${component}:${appVersion} .
-                            docker push $(acc-id).dkr.ecr.us-east-1.amazonaws.com/${project}/${component}:${appVersion}
+                            aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $(acc_id).dkr.ecr.us-east-1.amazonaws.com
+                            docker build -t $(acc_id).dkr.ecr.us-east-1.amazonaws.com/${project}/${component}:${appVersion} .
+                            docker push $(acc_id).dkr.ecr.us-east-1.amazonaws.com/${project}/${component}:${appVersion}
                         """
                     }
                 }
