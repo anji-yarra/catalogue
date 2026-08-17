@@ -13,11 +13,11 @@ pipeline {
                 }
             }
         }
-        stage('Build') {
+        stage('Install Dependencies') {
             steps {
                 script {
                     sh """
-                        echo "Version:  ${appVersion}"
+                        npm intall
                     """
                 }
             }
