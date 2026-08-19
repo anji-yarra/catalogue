@@ -28,6 +28,24 @@ pipeline {
                 }
             }
         }
+        stage('Run Tests') {
+            steps {
+                script {
+                    sh """
+                        npm test
+                    """
+                }
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                // 'My SonarQube Server' must match the name configured in Jenkins System Settings
+                withSonarQubeEnv('Sonar-server') {
+                    sh "${tool 'sonar-8'}/bin/sonar-scanner"
+                }
+            }
+        }
         stage('Docker Build') {
             steps {
                 script {
