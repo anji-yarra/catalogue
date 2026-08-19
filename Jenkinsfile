@@ -42,7 +42,7 @@ pipeline {
             steps {
                 // 'My SonarQube Server' must match the name configured in Jenkins System Settings
                 withSonarQubeEnv('Sonar-server') {
-                    sh "${tool 'sonar-8'}/bin/sonar-scanner"
+                    sh "${tool 'Sonar'}/bin/sonar-scanner"
                 }
             }
         }
