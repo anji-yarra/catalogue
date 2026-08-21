@@ -28,13 +28,13 @@ pipeline {
                 }
             }
         }
-        stage('Run Tests') {
+        stage('Unit tests') {
             steps {
                 script {
                     sh """
                         npm test
                     """
-                }
+                } 
             }
         }
 
