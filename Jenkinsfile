@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-        /* stage('Run Tests') {
+        stage('Run Tests') {
             steps {
                 script {
                     sh """
@@ -36,7 +36,7 @@ pipeline {
                     """
                 }
             }
-        } */
+        }
 
         stage('SonarQube Analysis') {
             steps {
