@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        'npm test -- --passWithNoTests'
+                        npm test
                     """
                 } 
             }
