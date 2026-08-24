@@ -5,4 +5,4 @@ def configMap = [
     componentName: 'catalogue'
 ]
 
-testPipeline()
+testPipeline(configMap)
