@@ -38,14 +38,14 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
+        /* stage('SonarQube Analysis') {
             steps {
                 // 'My SonarQube Server' must match the name configured in Jenkins System Settings
                 withSonarQubeEnv('Sonar-server') {
                     sh "${tool 'Sonar'}/bin/sonar-scanner"
                 }
             }
-        }
+        } */
         /* stage('SonarQube Quality Gate') {
             steps {
                 timeout(time: 10, unit: 'MINUTES') {
