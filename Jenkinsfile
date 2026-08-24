@@ -2,7 +2,7 @@
 
 def configMap = [
     projectName: 'roboshop',
-    componentName: 'catalogue',
+    componentName: 'catalogue'
 ]
 
 testPipeline()
