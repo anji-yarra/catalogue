@@ -5,4 +5,10 @@ def configMap = [
     componentName: "catalogue"
 ]
 
-testPipeline(configMap)
+if (env.BRANCH_NAME.equalsIgnoreCase('main')) {
+    echo "This is the main branch. Skipping the pipeline."
+} else {
+    nodejsEKSPipeline(configMap)
+}
+
+/* testPipeline(configMap) */
