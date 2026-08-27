@@ -1,8 +1,8 @@
 @Library('jenkins-shared-library') _
 
 def configMap = [
-    projectName: "roboshop",
-    componentName: "catalogue"
+    project: "roboshop",
+    component: "catalogue"
 ]
 
 if (env.BRANCH_NAME.equalsIgnoreCase('main')) {
