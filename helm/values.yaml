@@ -1,0 +1,7 @@
+deployment:
+  imageRepo: 884057990406.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue
+  imageVersion: latest
+configmap:
+  mongodbUrl: "mongodb://mongodb:27017/catalogue"
+hpa:
+  cpuPercentage: 80
