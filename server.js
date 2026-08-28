@@ -5,8 +5,7 @@ instana({
     tracing: {
         enabled: true
     }
-}); 
-echo "// webhook test" 
+});  
 // some change
 // some changes, few more changes
 const { MongoClient, ObjectId } = require('mongodb');
