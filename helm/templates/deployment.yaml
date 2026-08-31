@@ -10,7 +10,7 @@ metadata:
     tier: backend
     component: catalogue
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       project: roboshop
